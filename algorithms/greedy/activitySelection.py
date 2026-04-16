@@ -48,3 +48,41 @@ def brute_force_activity(activities):
     return max_count
 
 print(brute_force_activity(a))
+
+"""
+Using a greedy algorithm #1
+Steps:
+1. sort in order of start time. S = []
+2. for i = 1 to n
+    if activity i has no overlap w/ activities in S:
+        add activity i in S
+3. return S
+"""
+def greedy_one_activity(List):
+    S = []
+    sorted_list = sorted(List)
+    S.append(sorted_list[0])
+    last_finish = sorted_list[0][1]
+    for i in range(1, len(sorted_list)):
+        sj, fj = sorted_list[i]
+        if sj >= last_finish:
+            S.append(sorted_list[i])
+            last_finish = fj
+
+    return S
+
+print(greedy_one_activity(a))
+
+"""
+Using a greedy algorithm #2
+Steps:
+1. sort in order of finish time. S = [] for optimitaly
+2. for i = 1 to n
+    if activity i has no overlap w/ activities in S:
+        add activity i in S
+3. return S
+"""
+def greedy_two_activity(List):
+    S = []
+    sorted_list = 0
+    return S
