@@ -44,7 +44,7 @@ def brute_force_activity(activities):
     for subset in subsets:
         if is_valid(subset):
             max_count = max(max_count, len(subset))
-
+           # print(subset)
     return max_count
 
 print(brute_force_activity(a))
@@ -63,12 +63,13 @@ def greedy_one_activity(List):
     sorted_list = sorted(List)
     S.append(sorted_list[0])
     last_finish = sorted_list[0][1]
+    #print("LF", last_finish)
     for i in range(1, len(sorted_list)):
         sj, fj = sorted_list[i]
         if sj >= last_finish:
             S.append(sorted_list[i])
             last_finish = fj
-
+    print(f"Using greedy alg 1, # of actv is: {len(S)}")
     return S
 
 print(greedy_one_activity(a))
@@ -84,5 +85,16 @@ Steps:
 """
 def greedy_two_activity(List):
     S = []
-    sorted_list = 0
+    sorted_list = sorted(List, key=lambda x: x[1])
+    S.append(sorted_list[0])
+    last_finish = sorted_list[0][1]
+
+    for i in range(1, len(sorted_list)):
+        sj, fj = sorted_list[i]
+        if sj >= last_finish:
+            S.append(sorted_list[i])
+            last_finish = fj
+    print(f"Using greedy alg 2, # of actv is: {len(S)}")
     return S
+
+print(greedy_two_activity(a))
