@@ -42,6 +42,8 @@ print(minCoins(coins, amount))
 """
 Woah... here i noticed greedy failing, it outputed: [4, 1, 1]
 but the optimal solution is obv [3,3] 
+
+this is how i realized DP would work best for this problem. 
 """
 coins = [1, 3, 4]
 amount = 6
