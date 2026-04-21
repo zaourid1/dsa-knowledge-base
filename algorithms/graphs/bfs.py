@@ -4,7 +4,24 @@ from collections import deque
 def bfs(graph, s):
     Q = deque()
     
-    dist = 0
+    # Step 1: initialize distances
+    dist = {}
+    for u in graph.get_vertices():
+        dist[u] = float('inf')
+    print(dist)
+
+    dist[s] = 0
+    Q.append(s)
+
+    # Step 2: BFS loop
+    while Q:
+        u = Q.popleft()
+
+        for v in graph.get_neighbors(u):
+            if dist[v] == float('inf'):
+                Q.append(v)
+                print(f"Q: {Q}")
+                dist[v] = dist[u] + 1
 
     return dist
 

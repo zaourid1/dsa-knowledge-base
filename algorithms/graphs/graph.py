@@ -22,3 +22,11 @@ class Graph:
 
     def get_vertices(self):
         return list(self.adj.keys())
+
+g = Graph()
+g.add_vertex('A')
+g.add_edge("A","B")
+g.add_vertex('C')
+g.add_edge("C","D")
+print(g.get_vertices())
+print(g.get_neighbors("B"))
