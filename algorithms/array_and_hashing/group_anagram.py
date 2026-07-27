@@ -3,18 +3,18 @@ Input: strs = ["act","pots","tops","cat","stop","hat"]
 
 Output: [["hat"],["act", "cat"],["stop", "pots", "tops"]]
 """
+from collections import defaultdict
+
 def groupAnagrams(strs):
-        hash1 = {}
-        for word in strs:
-            print(word)
-            for letter in word:
-                print(letter)
-                '''
-                if letter in hash1:
-                    hash1[letter] += 1
-                else:
-                    hash1.update({letter: 1})
-                '''
-        final = []
-        
-        print(hash1)
+        hash1 = defaultdict(list)
+        for s in strs:
+                count = [0]*26
+                for c in s:
+                    count[ord(c) - ord('a')] += 1
+                    #print(count)
+                hash1[tuple(count)].append(s)
+               # print(hash1)
+        return list(hash1.values())
+
+strs = ["act","pots","tops","cat","stop","hat"]
+print(groupAnagrams(strs))
