@@ -34,6 +34,7 @@ dsa-knowledge-base/
 │
 ├── algorithms/        # Core algorithm categories (DP, Greedy, Graphs, etc.)
 ├── data-structures/  # Implementations + notes for DS
+|── neetcode150/      # doing neetcode 150 problems
 ├── patterns/         # Reusable problem-solving techniques
 ├── problems/         # Practice problems + breakdowns
 ├── cheatsheets/      # Quick revision material
@@ -42,22 +43,7 @@ dsa-knowledge-base/
 
 ---
 
-## 🛠️ Approach
-
-Each topic in this repo follows a structured format:
-
-* 📌 Concept explanation (simple + intuitive)
-* ⚙️ Time & space complexity
-* 🧠 When to use / when NOT to use
-* ⚠️ Common pitfalls
-* 🔁 Related patterns
-* 💻 Implementation (written from scratch)
-* 🧩 Practice problems + breakdowns
-* 🧠 Personal insights & mistakes
-
----
-
-## 🔥 Philosophy
+## Philosophy
 
 This is not about solving 1000 problems.
 
@@ -69,20 +55,7 @@ This is about:
 
 ---
 
-## 📈 Progress Tracker
-
-| Topic               | Status |
-| ------------------- | ------ |
-| Arrays              | ⏳      |
-| Linked Lists        | ⏳      |
-| Trees               | ⏳      |
-| Graphs              | ⏳      |
-| Dynamic Programming | ⏳      |
-| Greedy              | ⏳      |
-
----
-
-## 🧠 Example Learning Flow
+## Example Learning Flow
 
 1. Learn concept (lecture / video / textbook)
 2. Write notes in this repo
@@ -92,7 +65,7 @@ This is about:
 
 ---
 
-## 🚀 Why this repo exists
+## Why this repo exists
 
 Most people solve problems and forget them.
 
@@ -104,13 +77,13 @@ This repo exists to:
 
 ---
 
-## 📌 Ongoing
+## Ongoing
 
 This is a continuously evolving repository as I learn, build, and improve.
 
 ---
 
-## ⭐ If you’re reading this
+## If you’re reading this
 
 Feel free to explore, fork, or use this as inspiration for your own learning system.
 
