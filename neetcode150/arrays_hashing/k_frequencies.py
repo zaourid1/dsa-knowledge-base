@@ -13,7 +13,7 @@ Output: [2,3]
 
 def topKFrequent(nums,k):
         h = {}
-        l = []
+       
         for i in nums:
             if i not in h:
                 h[i] = 1
